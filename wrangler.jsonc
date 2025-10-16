@@ -1,0 +1,15 @@
+// Minimal config with Static Assets + bindings placeholders
+{
+  "name": "stadli",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-10-01",
+  "assets": { "directory": "public" },
+  "d1_databases": [ { "binding": "DB", "database_name": "stadli", "database_id": "${STADLI_D1_ID}" } ],
+  "kv_namespaces": [
+    { "binding": "SESSIONS", "id": "${STADLI_KV_ID}" },
+    { "binding": "CONFIG", "id": "${STADLI_CONFIG_KV_ID}" }
+  ],
+  "r2_buckets": [ { "binding": "ASSETS", "bucket_name": "${STADLI_R2_BUCKET}" } ],
+  "ai": { "binding": "AI" },
+  "vars": { "APP_NAME": "Stadli Admin" }
+}
